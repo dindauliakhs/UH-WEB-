@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perizinan Menonton Bioskop</title>
+    </head>
+    <body>
+        <h1>Perizinan Menonton Bioskop</h1>
+        <p>Masukan umur:</p>
+        <input type="number" id="umur">
+        <button onclick="cekIzin()">Cek Izin</button>
+        <p id="hasil"></p>
+
+        <script type="text/javascript">
+            function cekIzin() {
+                var umur = document.getElementById("umur").value;
+
+                if (umur < 7) {
+                    document.getElementById("hasil").innerHTML = "Balita tidak boleh menonton bioskop";
+                } else {
+                    document.getElementById("hasil").innerHTML = "Remaja di izinkan menonton bioskop";
+                }
+            }
+        </script>
+    </body>
+</html>

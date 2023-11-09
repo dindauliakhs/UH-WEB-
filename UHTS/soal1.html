@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .square {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="square" id="mySquare"></div>
+        <button onclick="changeColor()">Ubah Warna</button>
+
+        <script>
+            function changeColor() {
+                var square = document.getElementById("mySquare");
+                square.style.backgroundColor = "blue";
+            }
+        </script>
+        
+    </body>
+</html>

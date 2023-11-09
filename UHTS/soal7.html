@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pemesanan Makanan dan Minuman</title>
+    </head>
+    <body>
+        <h1>Pemesanan Makanan dan Minuman</h1>
+
+        <script type="text/javascript">
+
+        var harga_makanan = 12000; 
+        var harga_minuman = 5000; 
+
+        var jumlah_makanan = parseInt(prompt("Masukkan jumlah makanan yang ingin dipesan:"));
+        var jumlah_minuman = parseInt(prompt("Masukkan jumlah minuman yang ingin dipesan:"));
+
+        var total_harga = (harga_makanan * jumlah_makanan) + (harga_minuman * jumlah_minuman);
+
+        document.write("Anda memesan " + jumlah_makanan + " makanan dan " + jumlah_minuman + " minuman.<br>");
+        document.write("Total harga yang harus dibayarkan adalah: " + total_harga + " Rupiah.");
+        </script>
+    </body>
+</html>

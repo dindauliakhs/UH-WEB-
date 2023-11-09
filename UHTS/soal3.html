@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Pembelian Barang</title>
+    </head>
+    <body>
+        <h1>Pembelian Barang Aksesoris</h1>
+
+        <form id="barangForm">
+            <label for="namaBarang">Nama Barang:</label>
+            <select id="namaBarang">
+                <option value="USB">USB (Rp 20.000)</option>
+                <option value="Memori">Memori (Rp 50.000)</option>
+                <option value="Speaker">Speaker (Rp 20.000)</option>
+            </select>
+
+            <label for="jumlahBarang">Jumlah:</label>
+            <input type="number" id="jumlahBarang" min="1" value="1">
+
+            <button type="button" onclick="hitungTotal()">Hitung Total</button>
+        </form>
+
+        <p>Total Harga: <span id="totalHarga">Rp 0</span></p>
+
+        <script>
+            function hitungTotal() {
+              var namaBarang = document.getElementById("namaBarang").value;
+              var jumlahBarang = parseInt(document.getElementById("jumlahBarang").value);
+              var hargaPerBarang;
+        
+              switch (namaBarang) {
+                case "USB":
+                  hargaPerBarang = 20000;
+                  break;
+                case "Memori":
+                  hargaPerBarang = 50000;
+                  break;
+                case "Speaker":
+                  hargaPerBarang = 20000;
+                  break;
+                default:
+                  hargaPerBarang = 0;
+                  break;
+              }
+        
+              var totalHarga = hargaPerBarang * jumlahBarang;
+              document.getElementById("totalHarga").textContent = "Rp " + totalHarga;
+            }
+          </script>
+    </body>
+</html>

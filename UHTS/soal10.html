@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Kembalian</title>
+</head>
+<body>
+    <h1>Menghitung Kembalian</h1>
+
+    <script type="text/javascript">
+        var hargaBarang = parseFloat(prompt("Masukkan harga barang:"));
+        var jumlahUangDibayarkan = parseFloat(prompt("Masukkan jumlah uang yang dibayarkan:"));
+
+        if (isNaN(hargaBarang) || isNaN(jumlahUangDibayarkan)) {
+            document.write("Masukkan angka yang valid.");
+        } else if (hargaBarang > jumlahUangDibayarkan) {
+            document.write("Uang yang dibayarkan kurang. Silakan bayar dengan jumlah yang mencukupi.");
+        } else {
+            var kembalian = jumlahUangDibayarkan - hargaBarang;
+            document.write("Kembalian yang harus diberikan adalah: " + kembalian + " Rupiah.");
+        }
+    </script>
+</body>
+</html>
